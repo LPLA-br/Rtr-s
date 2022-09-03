@@ -1,0 +1,62 @@
+.\" manual de rtres para
+.\" o programa man.
+.TH FOO 1 "JULHO 2022" Linux "User Manuals"
+.SH NAME
+rtres \- regra de três simples com interpertador perigoso
+.SH SYNOPSIS
+.B rtrez [-h]
+.br
+.B rtres [-di] [NUMERO] [NUMERO] [NUMERO]
+.br
+.B rtres [-f
+.I arquivo-calc
+.B ]
+.br
+.\".I file
+.SH DESCRIPTION
+.B rtrez
+Este programa pode fazer regra de três, inversa ou direta, 
+pela linha de comando ou interpetar, com a opção -f [arquivo]
+um arquivo de texto contendo N operações na forma:
+NUMERO:NUMERO:NUMERO:MODO\nNUMERO:NUMERO:NUMERO:MODO\n
+sendo MODO a especificação: i para inversa e d para direta.
+.SH OPTIONS
+.IP "-f arquivo"
+Interpreta o arquivo especificado imprimindo os resultados no terminal.
+.IP "-i"
+Faz regra de três inversa com três números especificado a frente dessa opção.
+.\".I config-file
+.\".IR /etc/foo.conf .
+.\"This overrides any
+.\".B FOOCONF
+.\"environment variable.
+.IP "-d"
+Faz regra de três direta com três números especificados a frente dessa opção.
+.SH FILES
+.I ArquivoContendoCalculos
+.RS
+.\".BR foo (5)
+Exemplo abaixo
+.br
+60:1:120:i
+.br
+50:2:121:i
+.br
+10:10:10:d
+.br
+.\".RE
+.\".I ~/.foorc
+.\".RS
+.\"Per user configuration file. See
+.\".BR foo (5)
+.\"for further details.
+.SH DIAGNOSTICS
+
+arquivo mal escrito pode:
+Causar funcionamento erratico.
+
+.SH AUTHOR
+Luiz Paulo de Lima Araújo <none@none>
+.SH "SEE ALSO"
+.BR "bc(1)"
+
