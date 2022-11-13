@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("\nnúmero de argumentos insuficientes.\n");
+		help();
 		exit(11);
 	}
 	exit(0);
